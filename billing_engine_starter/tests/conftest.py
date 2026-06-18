@@ -23,7 +23,7 @@ from billing_engine.taxes import NoTax, TaxContext
 
 
 @pytest.fixture
-def db() -> Database:
+def db() -> Database:  # pyright: ignore[reportInvalidTypeForm]
     """A fresh, file-backed SQLite database with schema applied.
 
     File-backed (not :memory:) so the same DB can be opened across multiple
